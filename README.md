@@ -1,6 +1,6 @@
 # nuntius
 
-*nuntius* (Latin: "messenger") is a personal Discord bot written in Rust.
+*nuntius* (Latin: 'messenger') is a personal Discord bot written in Rust.
 
 It watches the streams I care about — my inbox, my newsletters, and the
 sites I follow — and delivers filtered summaries to my Discord server.
