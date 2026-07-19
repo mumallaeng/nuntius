@@ -22,6 +22,37 @@ Beyond that:
   features as internal modules.
 - Keep every piece of personal information out of this repository.
 
+## Workspace Layout
+
+The repository stays as one Rust workspace while Discord ingress, sessions,
+permissions, and local-model adapters are shared. A domain crate can move to
+another repository later if it needs an independent release cycle, deployment,
+credential boundary, or reusable public API.
+
+```text
+nuntius/
+├── src/                         deployable application entry point
+└── crates/
+    └── nuntius-english/         deterministic English-learning policy
+```
+
+### English foundation
+
+`nuntius-english` currently implements backend-independent policy for:
+
+- OPIc and integrated-English channel definitions without numeric Discord
+  name prefixes;
+- equal initial interest bands for the primary robotics and
+  hardware-firmware-software domain and general STEM;
+- privacy-bounded cross-space interest reuse;
+- OPIc scope filtering before interest-based example selection; and
+- local-first pronunciation stages, focused feedback, auxiliary-only ASR
+  evidence, and session-scoped raw audio retention.
+
+Discord transport, persistence, audio capture, speech models, and LLM adapters
+are intentionally outside the domain crate and remain upcoming integration
+work.
+
 ## Architecture Principles
 
 - **One repo, modular inside.** Features live as modules (later: workspace
@@ -63,6 +94,8 @@ Beyond that:
 
 Foundation:
 
+- [x] Convert the repository to a Rust workspace
+- [x] Add backend-independent English-learning policy crate
 - [ ] Decide mail source: Gmail API vs IMAP
 - [ ] Define `config.example.toml` schema (mail account, filter rules,
       watched sites, channel routing)
@@ -89,5 +122,8 @@ Lane 3 — watched-site updates:
 
 Later:
 
+- [ ] Connect `nuntius-english` to Discord threads and voice attachments
+- [ ] Add SQLite persistence for English sessions, interests, and progress
+- [ ] Add structured local speech and pronunciation adapters
 - [ ] Deployment target (local daemon vs small server)
 - [ ] Next features (TBD)
