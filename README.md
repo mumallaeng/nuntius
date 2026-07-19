@@ -31,8 +31,11 @@ credential boundary, or reusable public API.
 
 ```text
 nuntius/
-├── src/                         deployable application entry point
+├── Cargo.toml                   virtual workspace definition
+├── apps/
+│   └── gateway/                 shared Discord runtime entry point
 └── crates/
+    ├── vita/                    reserved personal-life space boundary
     ├── lingua/                  implemented language-learning policy
     ├── litterae/                reserved literature boundary
     ├── ratio/                   reserved mathematics, science, engineering boundary
@@ -52,8 +55,8 @@ nuntius/
 - local-first pronunciation stages, focused feedback, auxiliary-only ASR
   evidence, and session-scoped raw audio retention.
 
-`litterae`, `ratio`, and `fabrica` contain no domain implementation yet. Their
-minimal crates reserve workspace boundaries only. Discord transport,
+`vita`, `litterae`, `ratio`, and `fabrica` contain no domain implementation
+yet. Their minimal crates reserve workspace boundaries only. Discord transport,
 persistence, audio capture, speech models, and LLM adapters are intentionally
 outside `lingua` and remain upcoming integration work.
 
@@ -63,6 +66,9 @@ outside `lingua` and remain upcoming integration work.
   crates such as `ingest`, `filter`, `bot`) rather than separate
   repositories. A feature graduates to its own repo only when it becomes
   independently useful or needs a private boundary.
+- **Runtime and Discord spaces are separate.** `apps/gateway` is the shared
+  process. `vita`, `lingua`, `litterae`, `ratio`, and `fabrica` are domain
+  boundaries named after Discord spaces.
 - **Code is public, configuration is private.** The public/private line is
   drawn between code and data, not between features. Filtering logic is
   code; *what* I filter is data.

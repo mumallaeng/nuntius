@@ -15,7 +15,7 @@ name = "litterae"
 version = "0.1.0"
 
 [[package]]
-name = "nuntius"
+name = "nuntius-gateway"
 version = "0.1.0"
 dependencies = [
  "lingua",
@@ -23,4 +23,8 @@ dependencies = [
 
 [[package]]
 name = "ratio"
+version = "0.1.0"
+
+[[package]]
+name = "vita"
 version = "0.1.0"

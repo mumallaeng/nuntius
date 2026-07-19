@@ -1,17 +1,10 @@
-[package]
-name = "nuntius"
-version = "0.1.0"
-edition = "2024"
-
 [workspace]
 members = [
-    ".",
+    "apps/gateway",
     "crates/fabrica",
     "crates/lingua",
     "crates/litterae",
     "crates/ratio",
+    "crates/vita",
 ]
 resolver = "3"
-
-[dependencies]
-lingua = { path = "crates/lingua" }
