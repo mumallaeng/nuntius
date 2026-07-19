@@ -1,4 +1,4 @@
-//! Track-aware topic selection.
+//! Lingua track-aware topic selection.
 
 use std::collections::BTreeSet;
 

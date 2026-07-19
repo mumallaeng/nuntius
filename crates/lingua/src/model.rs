@@ -1,4 +1,4 @@
-//! Shared English-learning domain types.
+//! Shared Lingua domain types.
 
 /// An English-learning track with its own personalization boundary.
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]

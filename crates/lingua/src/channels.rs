@@ -1,4 +1,4 @@
-//! Discord channel definitions.
+//! Lingua Discord channel definitions.
 //!
 //! `order_ref` is documentation/configuration metadata. It must never be
 //! rendered as part of `display_name`; the user controls Discord ordering.

@@ -33,12 +33,15 @@ credential boundary, or reusable public API.
 nuntius/
 ├── src/                         deployable application entry point
 └── crates/
-    └── nuntius-english/         deterministic English-learning policy
+    ├── lingua/                  implemented language-learning policy
+    ├── litterae/                reserved literature boundary
+    ├── ratio/                   reserved mathematics, science, engineering boundary
+    └── fabrica/                 reserved hardware-software systems boundary
 ```
 
 ### English foundation
 
-`nuntius-english` currently implements backend-independent policy for:
+`lingua` currently implements backend-independent policy for:
 
 - OPIc and integrated-English channel definitions without numeric Discord
   name prefixes;
@@ -49,9 +52,10 @@ nuntius/
 - local-first pronunciation stages, focused feedback, auxiliary-only ASR
   evidence, and session-scoped raw audio retention.
 
-Discord transport, persistence, audio capture, speech models, and LLM adapters
-are intentionally outside the domain crate and remain upcoming integration
-work.
+`litterae`, `ratio`, and `fabrica` contain no domain implementation yet. Their
+minimal crates reserve workspace boundaries only. Discord transport,
+persistence, audio capture, speech models, and LLM adapters are intentionally
+outside `lingua` and remain upcoming integration work.
 
 ## Architecture Principles
 
@@ -122,7 +126,7 @@ Lane 3 — watched-site updates:
 
 Later:
 
-- [ ] Connect `nuntius-english` to Discord threads and voice attachments
+- [ ] Connect `lingua` to Discord threads and voice attachments
 - [ ] Add SQLite persistence for English sessions, interests, and progress
 - [ ] Add structured local speech and pronunciation adapters
 - [ ] Deployment target (local daemon vs small server)

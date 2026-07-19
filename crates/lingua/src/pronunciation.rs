@@ -1,4 +1,4 @@
-//! Local-first pronunciation practice policy.
+//! Lingua local-first pronunciation practice policy.
 
 #[derive(Clone, Copy, Debug, Eq, PartialEq)]
 pub enum PronunciationStage {

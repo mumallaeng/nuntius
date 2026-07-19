@@ -1,4 +1,4 @@
-//! Deterministic interpretation of cross-space interest signals.
+//! Lingua interpretation of cross-space interest signals.
 
 use crate::model::{EnglishReuse, InterestGroup, PrivacyClass, TopicCandidate};
 

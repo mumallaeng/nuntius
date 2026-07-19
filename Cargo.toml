@@ -4,8 +4,14 @@ version = "0.1.0"
 edition = "2024"
 
 [workspace]
-members = [".", "crates/nuntius-english"]
+members = [
+    ".",
+    "crates/fabrica",
+    "crates/lingua",
+    "crates/litterae",
+    "crates/ratio",
+]
 resolver = "3"
 
 [dependencies]
-nuntius-english = { path = "crates/nuntius-english" }
+lingua = { path = "crates/lingua" }

@@ -3,12 +3,24 @@
 version = 4
 
 [[package]]
+name = "fabrica"
+version = "0.1.0"
+
+[[package]]
+name = "lingua"
+version = "0.1.0"
+
+[[package]]
+name = "litterae"
+version = "0.1.0"
+
+[[package]]
 name = "nuntius"
 version = "0.1.0"
 dependencies = [
- "nuntius-english",
+ "lingua",
 ]
 
 [[package]]
-name = "nuntius-english"
+name = "ratio"
 version = "0.1.0"

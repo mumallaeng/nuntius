@@ -1,4 +1,4 @@
-//! English-learning domain contracts for Nuntius.
+//! English-learning domain contracts for the Lingua Discord space.
 //!
 //! Discord transport, persistence, speech models, and LLM backends are kept
 //! outside this crate. This crate owns deterministic policy that must remain
